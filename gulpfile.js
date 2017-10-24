@@ -103,7 +103,7 @@ gulp.task('watch', function () {
 
     //监听js
     gulp.watch('./src/js/*',function () {
-        gulp.run('javascript');
+        gulp.run('script');
     })
 
     //监听字体文件

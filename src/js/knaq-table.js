@@ -19,19 +19,25 @@
                 $bodyWrap  = $('<div class="knaq-t-body"></div>'),
                 $parent = $this.parent();
 
+
+            if(!($this.height() > settings.height)){
+                settings.height = $this.height();
+            }
+
             $parent.height(settings.height);
 
             // 创建thead div
             var eleColgroup = $colgroup[0].cloneNode(true),
-                $headTable  = $('<table></table>').append( $(eleColgroup) ).append( $thead );
+                $headTable  = $('<table>').append( $(eleColgroup) ).append( $thead );
             $headWrap.append( $headTable ).appendTo( $parent );
 
             // 设置tbody高度
             var tbodyHeight = settings.height - parseInt( $headWrap.height() );
+            console.log($headWrap.height());
             // 创建tbody div
             $bodyWrap.append($this).height( tbodyHeight ).appendTo( $parent );
 
-            // 处理ie中滚动条引起的表头对应错位的问题
+            // 如果有竖向滚动条
             if($bodyWrap[0].offsetWidth !== $bodyWrap[0].clientWidth){
                 $thead.find('tr').each(function(){
                     var $this = $(this);
@@ -43,7 +49,7 @@
             var tbodyArr = [];
 
             // 判断列固定参数
-            if(!!settings.columns && JSON.stringify(settings.columns) !== '{}'){
+            if(!!settings.columns && JSON.stringify(settings.columns) !== '{}' && $this.width() > $parent.width()){
                 for (var x in settings.columns){
                     switch (x){
                         case 'left':
@@ -71,14 +77,21 @@
                         })
                     }
 
-                var cols = $tbody.find('tr').eq(0).find('td');
-                var columnsWidth = 0;
+                var cols = $tbody.find('tr').eq(0).find('td'),
+                    columnsWidth = 0,
+                    borderWidth  = parseInt($parent.css('border-left-width'));
+
                 for(var i = 0;i < n; i++){
                     columnsWidth += cols.eq(i).outerWidth(true);
                 }
                 var $thisInnerHTML = $parent.html();
-                $columnsBox.html($thisInnerHTML).width(columnsWidth);
 
+                $columnsBox.html($thisInnerHTML).width(columnsWidth + borderWidth);
+
+                // $columnsBox.find('table').width($parent.width());
+
+
+                // 如果有横向滚动条
                 if($bodyWrap[0].offsetHeight !== $bodyWrap[0].clientHeight){
                     var scrollBarWidth = $bodyWrap[0].offsetHeight - $bodyWrap[0].clientHeight;
                     $columnsBox.css({
@@ -97,6 +110,7 @@
                 }
                 return $columnsBox;
             }
+
             // 处理滚动事件
             var startX = $bodyWrap.scrollLeft(),startY = $bodyWrap.scrollTop();
                 $bodyWrap.on('scroll',function(event){

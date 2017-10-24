@@ -213,13 +213,814 @@
         </tbody>
     </table>
 </div>
+
+
+<div class="knaq-table w960 marc">
+    <table id="surveyFormTable01" class="personalTable table-fixed">
+        <colgroup>
+            <col width="50">
+            <col width="150">
+            <col width="150">
+            <col width="150">
+
+            <col width="150">
+            <col width="150">
+            <col width="150">
+            <col width="150">
+            <col width="150">
+            <col width="150">
+
+            <col width="300">
+            <col width="150">
+            <col width="150">
+            <col width="150">
+
+            <col width="150">
+            <col width="150">
+
+            <col width="150">
+            <col width="150">
+            <col width="150">
+            <col width="150">
+        </colgroup>
+        <!--bob-->
+        <thead>
+        <tr class="FixedHeaderRow1">
+            <th rowspan="2">序号</th>
+            <th rowspan="2">动物中文名</th>
+            <th rowspan="2">动物别名</th>
+            <th rowspan="2">动物拉丁名</th>
+            <th colspan="2">实体</th>
+            <th colspan="2">尸体</th>
+            <th colspan="2">痕迹</th>
+            <th rowspan="2">植被类型</th>
+            <th rowspan="2">坡度</th>
+            <th rowspan="2">坡位</th>
+            <th rowspan="2">坡向</th>
+            <th colspan="2">坐标</th>
+            <th rowspan="2">海拔高度(米)</th>
+            <th rowspan="2">天气</th>
+            <th rowspan="2">记录时间</th>
+            <th rowspan="2">其他</th>
+        </tr>
+        <tr class="FixedHeaderRow1">
+            <th>数量(只)</th>
+            <th>距中线距离(米)</th>
+            <th>数量(只)</th>
+            <th>距中线距离(米)</th>
+            <th>类型</th>
+            <th>距中线距离(米)</th>
+            <th>经度</th>
+            <th>纬度</th>
+        </tr>
+        </thead>
+        <tbody id="tban">
+
+        <tr>
+            <input type="hidden" name="animals[0].mainid" value="4028e5a75a26d670015a26e636a80080">
+            <input type="hidden" name="animals[0].id" value="4028e5a75a26d670015a26e636dc0081">
+            <td>1</td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[0].animalsNameCn" id="a1" onchange="getlLatinNameByCode(this)">
+
+                    <option value="DWMC_HFJZ">黄腹角雉</option>
+
+                    <option value="DWMC_YB">云豹</option>
+
+                    <option value="DWMC_JQB">金钱豹</option>
+
+                    <option value="DWMC_JBHD">金斑喙凤蝶</option>
+
+                    <option value="DWMC_JGJS">井冈脊蛇</option>
+
+                    <option value="DWMC_CJCWZ">白颈长尾雉</option>
+
+                    <option value="DWMC_XYJ" selected="">小鸦鹃</option>
+
+                    <option value="DWMC_XLM">小灵猫</option>
+
+                    <option value="DWMC_XBSD">仙八色鸫</option>
+
+                    <option value="DWMC_SML">苏门羚又名鬣羚</option>
+
+                    <option value="DWMC_SL">水鹿</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[0].animalAlias" value="云"></td>
+            <td><input readonly="true" type="text" name="animals[0].animalLatinName" value="Centropus bengalensis"></td>
+            <td><input readonly="true" type="text" name="animals[0].entityno" value="1"></td>
+            <td><input readonly="true" type="text" name="animals[0].distanceCenterLineE" value="1.0"></td>
+            <td><input readonly="true" type="text" name="animals[0].bodyno" value="2"></td>
+            <td><input readonly="true" type="text" name="animals[0].distanceCenterLineB" value="2.0"></td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[0].traceType">
+
+                    <option value="HJ_FB">食迹</option>
+
+                    <option value="HJ_SJ">粪便</option>
+
+                    <option value="HJ_ZJ" selected="">足迹</option>
+
+                    <option value="HJ_WJ">卧迹</option>
+
+                    <option value="HJ_ZH">爪痕</option>
+
+                    <option value="HJ_MF">毛发（羽毛）</option>
+
+                    <option value="HJ_MJ">鸣叫</option>
+
+                    <option value="HJ_QT">其他</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[0].distanceCenterLineH" value="21.0"></td>
+            <td>
+                <select id="v0" class="easyui-combotree combotree-f combo-f" style="width: 168px; display: none;" data-options="url:'/JGSPATROLSYSTEM/animalsController/initVegetationTypesTree.do'" comboname="animals[0].vegetationTypes" disabled="disabled">
+                </select><span class="combo" style="width: 166px; height: 20px;"><input type="text" class="combo-text validatebox-text" autocomplete="off" disabled="disabled" readonly="readonly" style="cursor: pointer; width: 148px; height: 20px; line-height: 20px;"><span><span class="combo-arrow" style="height: 20px;"></span></span><input type="hidden" class="combo-value" name="animals[0].vegetationTypes" value="ZBLX_TWSL"></span>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[0].slope">
+
+                    <option value="PD_PP">平坡</option>
+
+                    <option value="PD_HP" selected="">缓坡</option>
+
+                    <option value="PD_XP">斜坡</option>
+
+                    <option value="PD_DP">陡坡</option>
+
+                    <option value="PD_JP">急坡</option>
+
+                    <option value="PD_AP">险坡</option>
+
+                </select>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[0].slopePositions">
+
+                    <option value="PW_JP" selected="">脊部</option>
+
+                    <option value="PW_SP">上坡</option>
+
+                    <option value="PW_ZP">中坡</option>
+
+                    <option value="PW_XP">下坡</option>
+
+                    <option value="PW_SG">山谷（或山洼）</option>
+
+                    <option value="PW_PD">平地</option>
+
+                </select>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[0].slopeTo">
+
+                    <option value="PX_BP" selected="">北坡</option>
+
+                    <option value="PX_DB">东北坡</option>
+
+                    <option value="PX_DP">东坡</option>
+
+                    <option value="PX_DN">东南坡</option>
+
+                    <option value="PX_NP">南坡</option>
+
+                    <option value="PX_XN">西南坡</option>
+
+                    <option value="PX_XP">西坡</option>
+
+                    <option value="PX_XB">西北坡</option>
+
+                    <option value="PX_WP">无坡向</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[0].longitude" value=""></td>
+            <td><input readonly="true" type="text" name="animals[0].latitude" value=""></td>
+            <td><input readonly="true" type="text" name="animals[0].altitude" value="12.0"></td>
+            <td>
+                <select disabled="disabled" name="animals[0].weather">
+
+                    <option value="TQ_QT">晴天</option>
+
+                    <option value="TQ_DY">多云</option>
+
+                    <option value="TQ_YT" selected="">阴天</option>
+
+                    <option value="TQ_M">霾</option>
+
+                    <option value="TQ_XY">小雨</option>
+
+                    <option value="TQ_ZY">中雨</option>
+
+                    <option value="TQ_DAY">大雨</option>
+
+                    <option value="TQ_BY">暴雨</option>
+
+                    <option value="TQ_W">雾</option>
+
+                    <option value="TQ_X">雪</option>
+
+                    <option value="TQ_S">霜</option>
+
+                    <option value="TQ_BB">冰雹</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[0].recordingTimeStr" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2017-02-10 15:20:14"></td>
+            <td><input readonly="true" type="text" name="animals[0].other" value=""></td>
+        </tr>
+
+        <tr>
+            <input type="hidden" name="animals[1].mainid" value="4028e5a75a26d670015a26e636a80080">
+            <input type="hidden" name="animals[1].id" value="4028e5a75a26d670015a26e637050082">
+            <td>2</td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[1].animalsNameCn" id="a1" onchange="getlLatinNameByCode(this)">
+
+                    <option value="DWMC_HFJZ">黄腹角雉</option>
+
+                    <option value="DWMC_YB">云豹</option>
+
+                    <option value="DWMC_JQB">金钱豹</option>
+
+                    <option value="DWMC_JBHD" selected="">金斑喙凤蝶</option>
+
+                    <option value="DWMC_JGJS">井冈脊蛇</option>
+
+                    <option value="DWMC_CJCWZ">白颈长尾雉</option>
+
+                    <option value="DWMC_XYJ">小鸦鹃</option>
+
+                    <option value="DWMC_XLM">小灵猫</option>
+
+                    <option value="DWMC_XBSD">仙八色鸫</option>
+
+                    <option value="DWMC_SML">苏门羚又名鬣羚</option>
+
+                    <option value="DWMC_SL">水鹿</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[1].animalAlias" value="哈"></td>
+            <td><input readonly="true" type="text" name="animals[1].animalLatinName" value="Teinopalpus aureus"></td>
+            <td><input readonly="true" type="text" name="animals[1].entityno" value="2"></td>
+            <td><input readonly="true" type="text" name="animals[1].distanceCenterLineE" value="3.0"></td>
+            <td><input readonly="true" type="text" name="animals[1].bodyno" value="1"></td>
+            <td><input readonly="true" type="text" name="animals[1].distanceCenterLineB" value="1.0"></td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[1].traceType">
+
+                    <option value="HJ_FB">食迹</option>
+
+                    <option value="HJ_SJ">粪便</option>
+
+                    <option value="HJ_ZJ">足迹</option>
+
+                    <option value="HJ_WJ">卧迹</option>
+
+                    <option value="HJ_ZH" selected="">爪痕</option>
+
+                    <option value="HJ_MF">毛发（羽毛）</option>
+
+                    <option value="HJ_MJ">鸣叫</option>
+
+                    <option value="HJ_QT">其他</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[1].distanceCenterLineH" value="3.0"></td>
+            <td>
+                <select id="v1" class="easyui-combotree combotree-f combo-f" style="width: 168px; display: none;" data-options="url:'/JGSPATROLSYSTEM/animalsController/initVegetationTypesTree.do'" comboname="animals[1].vegetationTypes" disabled="disabled">
+                </select><span class="combo" style="width: 166px; height: 20px;"><input type="text" class="combo-text validatebox-text" autocomplete="off" disabled="disabled" readonly="readonly" style="cursor: pointer; width: 148px; height: 20px; line-height: 20px;"><span><span class="combo-arrow" style="height: 20px;"></span></span><input type="hidden" class="combo-value" name="animals[1].vegetationTypes" value="ZBLX_TWSL"></span>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[1].slope">
+
+                    <option value="PD_PP" selected="">平坡</option>
+
+                    <option value="PD_HP">缓坡</option>
+
+                    <option value="PD_XP">斜坡</option>
+
+                    <option value="PD_DP">陡坡</option>
+
+                    <option value="PD_JP">急坡</option>
+
+                    <option value="PD_AP">险坡</option>
+
+                </select>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[1].slopePositions">
+
+                    <option value="PW_JP" selected="">脊部</option>
+
+                    <option value="PW_SP">上坡</option>
+
+                    <option value="PW_ZP">中坡</option>
+
+                    <option value="PW_XP">下坡</option>
+
+                    <option value="PW_SG">山谷（或山洼）</option>
+
+                    <option value="PW_PD">平地</option>
+
+                </select>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[1].slopeTo">
+
+                    <option value="PX_BP" selected="">北坡</option>
+
+                    <option value="PX_DB">东北坡</option>
+
+                    <option value="PX_DP">东坡</option>
+
+                    <option value="PX_DN">东南坡</option>
+
+                    <option value="PX_NP">南坡</option>
+
+                    <option value="PX_XN">西南坡</option>
+
+                    <option value="PX_XP">西坡</option>
+
+                    <option value="PX_XB">西北坡</option>
+
+                    <option value="PX_WP">无坡向</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[1].longitude" value=""></td>
+            <td><input readonly="true" type="text" name="animals[1].latitude" value=""></td>
+            <td><input readonly="true" type="text" name="animals[1].altitude" value=""></td>
+            <td>
+                <select disabled="disabled" name="animals[1].weather">
+
+                    <option value="TQ_QT" selected="">晴天</option>
+
+                    <option value="TQ_DY">多云</option>
+
+                    <option value="TQ_YT">阴天</option>
+
+                    <option value="TQ_M">霾</option>
+
+                    <option value="TQ_XY">小雨</option>
+
+                    <option value="TQ_ZY">中雨</option>
+
+                    <option value="TQ_DAY">大雨</option>
+
+                    <option value="TQ_BY">暴雨</option>
+
+                    <option value="TQ_W">雾</option>
+
+                    <option value="TQ_X">雪</option>
+
+                    <option value="TQ_S">霜</option>
+
+                    <option value="TQ_BB">冰雹</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[1].recordingTimeStr" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value=""></td>
+            <td><input readonly="true" type="text" name="animals[1].other" value=""></td>
+        </tr>
+
+        <tr>
+            <input type="hidden" name="animals[2].mainid" value="4028e5a75a26d670015a26e636a80080">
+            <input type="hidden" name="animals[2].id" value="4028e5a75a26d670015a26e637090083">
+            <td>3</td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[2].animalsNameCn" id="a1" onchange="getlLatinNameByCode(this)">
+
+                    <option value="DWMC_HFJZ">黄腹角雉</option>
+
+                    <option value="DWMC_YB" selected="">云豹</option>
+
+                    <option value="DWMC_JQB">金钱豹</option>
+
+                    <option value="DWMC_JBHD">金斑喙凤蝶</option>
+
+                    <option value="DWMC_JGJS">井冈脊蛇</option>
+
+                    <option value="DWMC_CJCWZ">白颈长尾雉</option>
+
+                    <option value="DWMC_XYJ">小鸦鹃</option>
+
+                    <option value="DWMC_XLM">小灵猫</option>
+
+                    <option value="DWMC_XBSD">仙八色鸫</option>
+
+                    <option value="DWMC_SML">苏门羚又名鬣羚</option>
+
+                    <option value="DWMC_SL">水鹿</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[2].animalAlias" value="但是"></td>
+            <td><input readonly="true" type="text" name="animals[2].animalLatinName" value="Neofelis nebulosa"></td>
+            <td><input readonly="true" type="text" name="animals[2].entityno" value="1"></td>
+            <td><input readonly="true" type="text" name="animals[2].distanceCenterLineE" value="3.0"></td>
+            <td><input readonly="true" type="text" name="animals[2].bodyno" value="2"></td>
+            <td><input readonly="true" type="text" name="animals[2].distanceCenterLineB" value="1.0"></td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[2].traceType">
+
+                    <option value="HJ_FB" selected="">食迹</option>
+
+                    <option value="HJ_SJ">粪便</option>
+
+                    <option value="HJ_ZJ">足迹</option>
+
+                    <option value="HJ_WJ">卧迹</option>
+
+                    <option value="HJ_ZH">爪痕</option>
+
+                    <option value="HJ_MF">毛发（羽毛）</option>
+
+                    <option value="HJ_MJ">鸣叫</option>
+
+                    <option value="HJ_QT">其他</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[2].distanceCenterLineH" value="3.0"></td>
+            <td>
+                <select id="v2" class="easyui-combotree combotree-f combo-f" style="width: 168px; display: none;" data-options="url:'/JGSPATROLSYSTEM/animalsController/initVegetationTypesTree.do'" comboname="animals[2].vegetationTypes" disabled="disabled">
+                </select><span class="combo" style="width: 166px; height: 20px;"><input type="text" class="combo-text validatebox-text" autocomplete="off" disabled="disabled" readonly="readonly" style="cursor: pointer; width: 148px; height: 20px; line-height: 20px;"><span><span class="combo-arrow" style="height: 20px;"></span></span><input type="hidden" class="combo-value" name="animals[2].vegetationTypes" value="ZBLX_NFTSL"></span>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[2].slope">
+
+                    <option value="PD_PP" selected="">平坡</option>
+
+                    <option value="PD_HP">缓坡</option>
+
+                    <option value="PD_XP">斜坡</option>
+
+                    <option value="PD_DP">陡坡</option>
+
+                    <option value="PD_JP">急坡</option>
+
+                    <option value="PD_AP">险坡</option>
+
+                </select>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[2].slopePositions">
+
+                    <option value="PW_JP" selected="">脊部</option>
+
+                    <option value="PW_SP">上坡</option>
+
+                    <option value="PW_ZP">中坡</option>
+
+                    <option value="PW_XP">下坡</option>
+
+                    <option value="PW_SG">山谷（或山洼）</option>
+
+                    <option value="PW_PD">平地</option>
+
+                </select>
+            </td>
+            <td>
+                <select disabled="disabled" type="text" name="animals[2].slopeTo">
+
+                    <option value="PX_BP">北坡</option>
+
+                    <option value="PX_DB">东北坡</option>
+
+                    <option value="PX_DP" selected="">东坡</option>
+
+                    <option value="PX_DN">东南坡</option>
+
+                    <option value="PX_NP">南坡</option>
+
+                    <option value="PX_XN">西南坡</option>
+
+                    <option value="PX_XP">西坡</option>
+
+                    <option value="PX_XB">西北坡</option>
+
+                    <option value="PX_WP">无坡向</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[2].longitude" value=""></td>
+            <td><input readonly="true" type="text" name="animals[2].latitude" value=""></td>
+            <td><input readonly="true" type="text" name="animals[2].altitude" value=""></td>
+            <td>
+                <select disabled="disabled" name="animals[2].weather">
+
+                    <option value="TQ_QT" selected="">晴天</option>
+
+                    <option value="TQ_DY">多云</option>
+
+                    <option value="TQ_YT">阴天</option>
+
+                    <option value="TQ_M">霾</option>
+
+                    <option value="TQ_XY">小雨</option>
+
+                    <option value="TQ_ZY">中雨</option>
+
+                    <option value="TQ_DAY">大雨</option>
+
+                    <option value="TQ_BY">暴雨</option>
+
+                    <option value="TQ_W">雾</option>
+
+                    <option value="TQ_X">雪</option>
+
+                    <option value="TQ_S">霜</option>
+
+                    <option value="TQ_BB">冰雹</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="animals[2].recordingTimeStr" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value=""></td>
+            <td><input readonly="true" type="text" name="animals[2].other" value=""></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+<div class="knaq-table w1800 marc">
+    <table id="surveyFormTable02" class="table-fixed">
+        <colgroup>
+            <col width="50">
+            <col width="100">
+            <col width="130">
+            <col width="150">
+            <col width="130">
+            <col width="130">
+            <col width="130">
+            <col width="130">
+            <col width="130">
+        </colgroup>
+        <thead>
+        <tr>
+            <th rowspan="2">序号</th>
+            <th rowspan="2">干扰类型</th>
+            <th rowspan="2">干扰情况描述</th>
+            <th rowspan="2" >现场处理情况描述</th>
+            <th colspan="2">坐标</th>
+            <th rowspan="2">海拔高度(米)</th>
+            <th rowspan="2">天气</th>
+            <th rowspan="2">记录时间</th>
+        </tr>
+        <tr>
+            <th>经度</th>
+            <th>纬度</th>
+        </tr>
+        </thead>
+        <tbody id="tbin">
+
+        <tr>
+            <input type="hidden" name="interferences[0].mainid" value="0e522c70-9071-46e9-8ab7-1e000b44cb21">
+            <input type="hidden" name="interferences[0].id" value="ba5ded6d-83ff-4ae9-a572-814f5743b233">
+            <td>1</td>
+            <td>
+                <select disabled="disabled" name="interferences[0].interferenceType">
+
+                    <option value="GX_CJ" selected="">采集</option>
+
+                    <option value="GX_FM">放牧</option>
+
+                    <option value="GX_SL">狩猎</option>
+
+                    <option value="GX_KK">开矿</option>
+
+                    <option value="GX_KH">开荒</option>
+
+                    <option value="GX_QT">其它干扰</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].interferenceDescribed" value="外来人员入区安夹放套"></td>
+            <td><input readonly="true" type="text" name="interferences[0].processingDescribed" value="将安放的捕猎工具全部收回，并对相关人员进行警告处罚"></td>
+            <td><input readonly="true" type="text" name="interferences[0].longitude" value="114°09′24″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].latitude" value="26°33′29.6″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].altitude" value="950.0"></td>
+            <td>
+                <select disabled="disabled" name="interferences[0].weather">
+
+                    <option value="TQ_QT" selected="">晴天</option>
+
+                    <option value="TQ_DY">多云</option>
+
+                    <option value="TQ_YT">阴天</option>
+
+                    <option value="TQ_M">霾</option>
+
+                    <option value="TQ_XY">小雨</option>
+
+                    <option value="TQ_ZY">中雨</option>
+
+                    <option value="TQ_DAY">大雨</option>
+
+                    <option value="TQ_BY">暴雨</option>
+
+                    <option value="TQ_W">雾</option>
+
+                    <option value="TQ_X">雪</option>
+
+                    <option value="TQ_S">霜</option>
+
+                    <option value="TQ_BB">冰雹</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].recordingTimeStr" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2016-10-12 07:20:00"></td>
+        </tr>
+        <tr>
+            <input type="hidden" name="interferences[0].mainid" value="0e522c70-9071-46e9-8ab7-1e000b44cb21">
+            <input type="hidden" name="interferences[0].id" value="ba5ded6d-83ff-4ae9-a572-814f5743b233">
+            <td>1</td>
+            <td>
+                <select disabled="disabled" name="interferences[0].interferenceType">
+
+                    <option value="GX_CJ" selected="">采集</option>
+
+                    <option value="GX_FM">放牧</option>
+
+                    <option value="GX_SL">狩猎</option>
+
+                    <option value="GX_KK">开矿</option>
+
+                    <option value="GX_KH">开荒</option>
+
+                    <option value="GX_QT">其它干扰</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].interferenceDescribed" value="外来人员入区安夹放套"></td>
+            <td><input readonly="true" type="text" name="interferences[0].processingDescribed" value="将安放的捕猎工具全部收回，并对相关人员进行警告处罚"></td>
+            <td><input readonly="true" type="text" name="interferences[0].longitude" value="114°09′24″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].latitude" value="26°33′29.6″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].altitude" value="950.0"></td>
+            <td>
+                <select disabled="disabled" name="interferences[0].weather">
+
+                    <option value="TQ_QT" selected="">晴天</option>
+
+                    <option value="TQ_DY">多云</option>
+
+                    <option value="TQ_YT">阴天</option>
+
+                    <option value="TQ_M">霾</option>
+
+                    <option value="TQ_XY">小雨</option>
+
+                    <option value="TQ_ZY">中雨</option>
+
+                    <option value="TQ_DAY">大雨</option>
+
+                    <option value="TQ_BY">暴雨</option>
+
+                    <option value="TQ_W">雾</option>
+
+                    <option value="TQ_X">雪</option>
+
+                    <option value="TQ_S">霜</option>
+
+                    <option value="TQ_BB">冰雹</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].recordingTimeStr" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2016-10-12 07:20:00"></td>
+        </tr>
+
+        <tr>
+            <input type="hidden" name="interferences[0].mainid" value="0e522c70-9071-46e9-8ab7-1e000b44cb21">
+            <input type="hidden" name="interferences[0].id" value="ba5ded6d-83ff-4ae9-a572-814f5743b233">
+            <td>1</td>
+            <td>
+                <select disabled="disabled" name="interferences[0].interferenceType">
+
+                    <option value="GX_CJ" selected="">采集</option>
+
+                    <option value="GX_FM">放牧</option>
+
+                    <option value="GX_SL">狩猎</option>
+
+                    <option value="GX_KK">开矿</option>
+
+                    <option value="GX_KH">开荒</option>
+
+                    <option value="GX_QT">其它干扰</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].interferenceDescribed" value="外来人员入区安夹放套"></td>
+            <td><input readonly="true" type="text" name="interferences[0].processingDescribed" value="将安放的捕猎工具全部收回，并对相关人员进行警告处罚"></td>
+            <td><input readonly="true" type="text" name="interferences[0].longitude" value="114°09′24″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].latitude" value="26°33′29.6″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].altitude" value="950.0"></td>
+            <td>
+                <select disabled="disabled" name="interferences[0].weather">
+
+                    <option value="TQ_QT" selected="">晴天</option>
+
+                    <option value="TQ_DY">多云</option>
+
+                    <option value="TQ_YT">阴天</option>
+
+                    <option value="TQ_M">霾</option>
+
+                    <option value="TQ_XY">小雨</option>
+
+                    <option value="TQ_ZY">中雨</option>
+
+                    <option value="TQ_DAY">大雨</option>
+
+                    <option value="TQ_BY">暴雨</option>
+
+                    <option value="TQ_W">雾</option>
+
+                    <option value="TQ_X">雪</option>
+
+                    <option value="TQ_S">霜</option>
+
+                    <option value="TQ_BB">冰雹</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].recordingTimeStr" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2016-10-12 07:20:00"></td>
+        </tr>
+        <tr>
+            <input type="hidden" name="interferences[0].mainid" value="0e522c70-9071-46e9-8ab7-1e000b44cb21">
+            <input type="hidden" name="interferences[0].id" value="ba5ded6d-83ff-4ae9-a572-814f5743b233">
+            <td>1</td>
+            <td>
+                <select disabled="disabled" name="interferences[0].interferenceType">
+
+                    <option value="GX_CJ" selected="">采集</option>
+
+                    <option value="GX_FM">放牧</option>
+
+                    <option value="GX_SL">狩猎</option>
+
+                    <option value="GX_KK">开矿</option>
+
+                    <option value="GX_KH">开荒</option>
+
+                    <option value="GX_QT">其它干扰</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].interferenceDescribed" value="外来人员入区安夹放套"></td>
+            <td><input readonly="true" type="text" name="interferences[0].processingDescribed" value="将安放的捕猎工具全部收回，并对相关人员进行警告处罚"></td>
+            <td><input readonly="true" type="text" name="interferences[0].longitude" value="114°09′24″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].latitude" value="26°33′29.6″"></td>
+            <td><input readonly="true" type="text" name="interferences[0].altitude" value="950.0"></td>
+            <td>
+                <select disabled="disabled" name="interferences[0].weather">
+
+                    <option value="TQ_QT" selected="">晴天</option>
+
+                    <option value="TQ_DY">多云</option>
+
+                    <option value="TQ_YT">阴天</option>
+
+                    <option value="TQ_M">霾</option>
+
+                    <option value="TQ_XY">小雨</option>
+
+                    <option value="TQ_ZY">中雨</option>
+
+                    <option value="TQ_DAY">大雨</option>
+
+                    <option value="TQ_BY">暴雨</option>
+
+                    <option value="TQ_W">雾</option>
+
+                    <option value="TQ_X">雪</option>
+
+                    <option value="TQ_S">霜</option>
+
+                    <option value="TQ_BB">冰雹</option>
+
+                </select>
+            </td>
+            <td><input readonly="true" type="text" name="interferences[0].recordingTimeStr" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2016-10-12 07:20:00"></td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
 <script src="lib/jquery-1.9.1.js"></script>
 <script src="js/knaq-table.js"></script>
 <script>
     $('.table-fixed').tableFixed({
-        height: 250,
+        height: 300,
         columns: {
-            left: 1
+            left: 2
         }
     });
 </script>
